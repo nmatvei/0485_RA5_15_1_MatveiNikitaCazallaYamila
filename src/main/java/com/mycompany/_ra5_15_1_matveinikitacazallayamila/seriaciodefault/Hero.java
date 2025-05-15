@@ -3,8 +3,11 @@ package com.mycompany._ra5_15_1_matveinikitacazallayamila.seriaciodefault;
 import java.io.Serializable;
 
 /**
- *
+ * Classe Hero que representa a l'heroi de un joc (Game) i que té un nom, sexe i
+ * el tipus de personatge que és (Warrior, Magician...)
+ * 
  * @author Nikita i Yamila
+ * @see Game
  */
 public class Hero implements Serializable {
     
@@ -30,12 +33,12 @@ public class Hero implements Serializable {
      * que és l'heroi.
      * 
      * @param name nom del heroi
-     * @param gendere sexe del heroi
+     * @param gender sexe del heroi
      * @param type el tipus de personatge
      */
-    public Hero(String name, char gendere, String type){
+    public Hero(String name, char gender, String type){
         this.name = name;
-        this.gender = gendere;
+        this.gender = gender;
         this.type = type;
     }
     
@@ -53,7 +56,7 @@ public class Hero implements Serializable {
      * 
      * @return sexe del heroi
      */
-    public char getGendere() {
+    public char getGender() {
         return gender;
     }
     
@@ -73,5 +76,15 @@ public class Hero implements Serializable {
      */
     public void setName(String name) {
         this.name = name;
+    }
+    
+    /**
+     * Mètode per saber tota la información de l'heroi
+     * 
+     * @return tota la informació de l'heroi
+     */
+    @Override
+    public String toString() {
+        return "\nHero:" + "\nName: " + name + "\nGender: " + gender + "\nType: " + type;
     }
 }
