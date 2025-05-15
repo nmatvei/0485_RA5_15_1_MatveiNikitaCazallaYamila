@@ -11,7 +11,7 @@ import java.io.*;
  */
 public class Game implements Serializable {
     
-    // Declaració d'atribust
+    // Declaració d'atributs
     private int score;
     private Hero player;
     private int level;
